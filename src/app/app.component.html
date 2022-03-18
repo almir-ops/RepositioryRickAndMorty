@@ -2,26 +2,26 @@
 <div class="po-wrapper">
   <po-toolbar p-title="As aventuras de Rick & Morty"></po-toolbar>
 
-  <po-menu [p-menus]="[{ label: 'Home', link: '/app/pagehome.html' }]"></po-menu>
+  <po-menu [p-menus]="menu"></po-menu>
 
   <po-page-default p-title="Personagens de Rick & Morty">
+   <po-button-group class="po-md-12" [p-buttons]="buttons" ></po-button-group>
 <div class="po-m-4 ">
   <div class=" po-lg-6 " *ngFor="let character of characters">
     <po-widget
     class=""
       p-title="{{character.name}}"
       (p-click)="modal.open()"
-      
       >
       <po-avatar class="po-md-4 po-sm-4" p-size="lg" (p-click)="modal.open()" p-src="{{character.image}}"> </po-avatar>
-      
+
       <p><strong>Status: </strong>{{character.status}} </p>
       <p><strong>Genero: </strong>{{character.gender}} </p>
       <p><strong>Espécie: </strong>{{character.species}} </p>
       <p><strong>Origem: </strong>{{character.origin.name}} </p>
-      
-      
-      
+
+
+
     </po-widget>
     <po-modal #modal p-title="{{character.name}}">
       <div class="po-row">
@@ -30,6 +30,8 @@
     </div>
     </po-modal>
   </div>
+  <po-button-group class="po-md-12" [p-buttons]="buttons" ></po-button-group>
+
 </div>
 </po-page-default>
 </div>

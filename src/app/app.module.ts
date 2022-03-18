@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     FormsModule,
@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
     PoModule,
     RouterModule.forRoot([])
   ],
-  providers: [ ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
