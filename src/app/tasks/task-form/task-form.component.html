@@ -1,0 +1,38 @@
+<div class="po-wrapper">
+    <po-menu [p-menus]="menu"></po-menu>
+    <router-outlet></router-outlet>
+    <po-page-default p-title="Personagens de Rick & Morty">
+      <div class="po-row">
+        <po-button-group class="po-offset-lg-3 po-offset-xl-3 po-offset-md-3 po-xl-4 po-lg-4 po-md-6 po-sm-12" [p-buttons]="buttons" ></po-button-group> 
+      </div>
+    <div class="po-m-4 ">
+      <div class=" po-lg-5 " *ngFor="let character of characters">
+        <po-widget
+        class=""
+          p-title="{{character.name}}"
+          (p-click)="modal.open()"
+          >
+          <po-avatar class="po-md-4 po-sm-4 po-mr-2" p-size="lg" (p-click)="modal.open()" p-src="{{character.image}}"> </po-avatar>
+          <p><strong>Status: </strong>{{character.status}} </p>
+          <p><strong>Genero: </strong>{{character.gender}} </p>
+          <p><strong>Espécie: </strong>{{character.species}} </p>
+    
+    
+        </po-widget>
+        <po-modal #modal p-title="{{character.name}}">
+          <div class="po-row">
+          <img [src]="character.image" class="sample-center-image" />
+          <p class="po-md-4 po-sm-4 po-mr-2"><strong> Origem: </strong>{{character.origin.name}} </p>
+          <p class="po-md-4 po-sm-4 po-mr-2"><strong> Criação: </strong>{{character.created}} </p>
+    
+        </div>
+        </po-modal>
+      </div>
+      
+    </div>
+    <div class="po-row">
+      <po-button-group class="po-offset-lg-3 po-offset-xl-3 po-xl-4 po-lg-4 po-md-6 po-sm-12 po-mt-4" [p-buttons]="buttons" ></po-button-group> 
+    </div>
+    </po-page-default>
+    </div>
+    
