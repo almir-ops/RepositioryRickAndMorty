@@ -21,13 +21,12 @@ export class AppComponent implements OnInit {
 
   menu: Array<any> = [
     { label: 'Home', link: '/' },
-    { label: 'Single', link: '/single' },
+    { label: 'Todos Personagens', link: '/new' },
   ]
 
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {
   }
   ngOnInit() {
-    this.callPerson()
   }
 
   callPerson(){
