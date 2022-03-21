@@ -1,4 +1,6 @@
 <div class="po-wrapper">
+  <po-toolbar p-title="As aventuras de Rick & Morty"></po-toolbar>
+
     <po-menu [p-menus]="menu"></po-menu>
     <router-outlet></router-outlet>
     <po-page-default p-title="Personagens de Rick & Morty">
@@ -21,10 +23,11 @@
         </po-widget>
         <po-modal #modal p-title="{{character.name}}">
           <div class="po-row">
-          <img [src]="character.image" class="sample-center-image" />
-          <p class="po-md-4 po-sm-4 po-mr-2"><strong> Origem: </strong>{{character.origin.name}} </p>
-          <p class="po-md-4 po-sm-4 po-mr-2"><strong> Criação: </strong>{{character.created}} </p>
-    
+          <img [src]="character.image" class="po-md-4" />
+          <div class="po-md-8">
+          <p class=""><strong> Origem: </strong>{{character.origin.name}} </p>
+          <p class=""><strong> Criação: </strong>{{character.created | date : 'dd MMM yyyy'}} </p>
+        </div>
         </div>
         </po-modal>
       </div>

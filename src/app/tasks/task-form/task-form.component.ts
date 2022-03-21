@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PoButtonGroupItem } from '@po-ui/ng-components';
 import { HttpClient } from '@angular/common/http';
+import { environment } from './environment';
+
 
 
 @Component({
@@ -21,7 +23,8 @@ export class TaskFormComponent implements OnInit {
 
   menu: Array<any> = [
     { label: 'Home', link: '/' },
-    { label: 'Todos Personagens', routerLink: '/tasks/task-form.component.html' },
+    { label: 'Todos Personagens', link: '/new' },
+    { label: 'Lista de episódios', link: '/list' },
   ]
   constructor(private http: HttpClient) { }
 
@@ -30,7 +33,7 @@ export class TaskFormComponent implements OnInit {
   }
 
   callPerson(){
-    this.http.get<any>(`https://rickandmortyapi.com/api/character/?page=${this.page}`).subscribe((response) => {
+    this.http.get<any>(`${environment.api}/character/?page=${this.page}`).subscribe((response) => {
       this.characters = response.results;
     })
   }

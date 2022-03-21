@@ -1,1 +1,14 @@
-<p>task-list works!</p>
+<div class="po-wrapper">
+    <po-toolbar p-title="As aventuras de Rick & Morty"></po-toolbar>
+  
+      <po-menu [p-menus]="menu"></po-menu>
+      <po-page-default p-title="Lista de episodios">
+        <po-button-group class="po-offset-lg-3 po-offset-xl-3 po-offset-md-3 po-xl-4 po-lg-4 po-md-6 po-sm-12 po-mb-4" [p-buttons]="buttons" ></po-button-group> 
+
+        <div *ngFor="let episode of episodes">
+        <po-container>
+        <p>{{episode.id}} - {{ episode.name }}</p>
+        </po-container>    
+</div>
+    </po-page-default>
+</div>

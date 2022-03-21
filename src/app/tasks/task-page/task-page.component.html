@@ -1,1 +1,31 @@
-<p>task-page works!</p>
+<div class="po-wrapper">
+    <po-toolbar p-title="As aventuras de Rick & Morty"></po-toolbar>
+    
+    <po-menu [p-menus]="menu"></po-menu>
+    <po-page-default p-title="Escolha uma opção">
+        <div class="po-row">
+        <po-widget
+          class="po-sm-12  po-lg-5"
+          p-title=""
+        >
+        <a routerLink="/new">
+        <div class="po-m-5">
+          <h1>Lista de personagens</h1>
+          </div>
+        </a>
+        </po-widget>
+        <po-widget
+          class="po-sm-12 po-md-8 po-lg-5" 
+        >
+        <a routerLink="/list">
+        <div class="po-m-5">
+            <h1>Lista de episódios</h1>
+            </div>
+            </a>
+        </po-widget>
+      </div>
+    </po-page-default>
+      <po-modal #modal p-title="Profile Image">
+        <img [src]="" class="sample-center-image" />
+      </po-modal>
+</div>
