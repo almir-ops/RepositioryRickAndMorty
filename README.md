@@ -2,6 +2,9 @@
 
 Utilizando a API de Rick and Morty esse pequeno projeto foi desenvolvido com a biblioteca de componentes PO-UI 
 
+![image](https://user-images.githubusercontent.com/54289863/165971671-985745f4-53ea-4975-a07d-35b8f0899a44.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
