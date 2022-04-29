@@ -1,5 +1,7 @@
 # ProjetoRickMorty
 
+Utilizando a API de Rick and Morty esse pequeno projeto foi desenvolvido com a biblioteca de componentes PO-UI 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
